@@ -25,6 +25,7 @@ jobs:
           
     job4:
         name: job4
+        needs: [job1, job2]
         runs-on: ubuntu-latest
         steps:
         - name: step4

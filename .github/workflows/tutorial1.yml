@@ -6,20 +6,27 @@ jobs:
         name: job1
         runs-on: ubuntu-latest
         steps:
-        - name: setup python
-          uses: actions/setup-python@v4
-          with:
-             python-version: 3.9
+        - name: step1
+          run: echo "todays date"
+
     job2:
         name: job2
         runs-on: ubuntu-latest
         steps:
         - name: step2
-          run: echo "Hello from job2"
+          run: echo "todays date"
 
     job3:
         name: job3
         runs-on: ubuntu-latest
         steps:
         - name: step3
-          run: echo "Hello from job3"
+          run: echo "todays date"
+          
+    job4:
+        name: job4
+        needs: [job1, job2]
+        runs-on: ubuntu-latest
+        steps:
+        - name: step4
+          run: echo "I am job4"

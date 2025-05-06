@@ -6,7 +6,7 @@ jobs:
       name: job1
       runs-on: ubuntu-latest
       steps:
-      - name: setup
+      - name: step1
       - run: "print date" date
       - run: "print working directory" pwd
       - run: "print current version of directory" ls -la

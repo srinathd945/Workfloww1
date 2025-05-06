@@ -23,5 +23,3 @@ jobs:
         steps:
         - name: step3
           run: echo "Hello from job3"
-
-    

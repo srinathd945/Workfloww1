@@ -1,4 +1,4 @@
-name:
+name: Challenge1
 on: push
 
 jobs:
@@ -10,7 +10,7 @@ jobs:
       - run: "print date" date
       - run: "print working directory" pwd
       - run: "print current version of directory" ls -la
-
+      
     job:2   
       name: job2
         runs-on: ubuntu-latest

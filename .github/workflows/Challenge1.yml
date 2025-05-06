@@ -1,0 +1,28 @@
+name:
+on: push
+
+jobs:
+   job1:
+      name: job1
+      runs-on: ubuntu-latest
+      steps:
+      - name: setup
+      - run: "print date" date
+      - run: "print working directory" pwd
+      - run: "print current version of directory" ls -la
+
+    job:2   
+      name: job2
+        runs-on: ubuntu-latest
+        steps:
+        - name: setup python
+          uses: actions/setup-python@v4
+          with:
+            python-version: 3.10
+        - name: check version of python
+          run: python --version
+        -name: setup pandas
+         run: pip install pandas
+        -name: Create Artifact
+         run: echo "This is my python artifact" > artifact.py
+         python: artifact.py
